@@ -1,0 +1,1 @@
+$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile "C:\Users\Public\AzureCLI.msi"; Start-Process msiexec.exe -Wait -ArgumentList '/I C:\Users\Public\AzureCLI.msi /quiet'; Remove-Item C:\Users\Public\AzureCLI.msi; az --version;
